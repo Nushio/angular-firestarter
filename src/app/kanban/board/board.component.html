@@ -13,7 +13,8 @@
   <div
     class="tasks"
     cdkDropList
-    cdkDropListOrientation="vertical"
+    id="{{ board.id }}"
+    [cdkDropListConnectedTo]="connectedBoards"
     (cdkDropListDropped)="taskDrop($event)"
   >
     <div
